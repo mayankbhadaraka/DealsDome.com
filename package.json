@@ -5,13 +5,12 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "start": "node server",
     "server": "nodemon server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "data:destroy": "node backend/seeder -d"
   },
   "author": "",
   "license": "MIT",
